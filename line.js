@@ -163,7 +163,7 @@ am4core.ready(function () {
 
         series.minBulletDistance = 2;
         var image = chart.plotContainer.createChild(am4core.Image);
-        image.href = "Bushfires.png";
+        image.href = "asset/bush-fire.png";
         image.width = 500;
         image.height = 500;
         image.x = 750;
