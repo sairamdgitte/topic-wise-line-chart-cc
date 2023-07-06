@@ -168,10 +168,10 @@ am4core.ready(function () {
         series.minBulletDistance = 2;
         var image = chart.plotContainer.createChild(am4core.Image);
         image.href = "asset/bush-fire-canva.png";
-        image.width = 500;
-        image.height = 500;
-        image.x = 1050;
-        image.y = 90;
+        image.width = 900;
+        image.height = 425;
+        image.x = 850;
+        image.y = 10;
 
         // series.minBulletDistance = 2;
         // var image = chart.plotContainer.createChild(am4core.Image);
