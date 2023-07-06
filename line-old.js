@@ -1,4 +1,3 @@
-
 am4core.ready(function () {
 
     // Themes begin
@@ -27,15 +26,10 @@ am4core.ready(function () {
         'Recycling and circular economy', 'Coal mining',
         'Glaciers and polar ice', 'Coral reefs',
         'Climate Pollution Reduction Scheme (2008)', 'Climate Science'];
-
-    // var countries = ['Executive remuneration', 'Superannuation',
-    // 'Social security and government benefits',
-    // 'Banking royal commission', 'Art markets', 'Financial scams',
-    // 'First homebuyers', 'Property market', 'Life insurance',
-    // 'Start ups', 'Retirement'];
     for (var i = 0; i < countries.length; i++) {
         createSeries(countries[i], countries[i]);
     }
+
 
     // Create series
     function createSeries(s, name) {
@@ -56,14 +50,14 @@ am4core.ready(function () {
 
 
         // Make bullets grow on hover
-        // var bullet = series.bullets.push(new am4charts.CircleBullet());
-        // bullet.circle.strokeWidth = 2;
-        // bullet.circle.radius = 3;
-        // bullet.circle.fill = am4core.color("#fff");
+        var bullet = series.bullets.push(new am4charts.CircleBullet());
+        bullet.circle.strokeWidth = 2;
+        bullet.circle.radius = 3;
+        bullet.circle.fill = am4core.color("#fff");
 
 
-        // var bullethover = bullet.states.create("hover");
-        // bullethover.properties.scale = 1.4;
+        var bullethover = bullet.states.create("hover");
+        bullethover.properties.scale = 1.4;
 
         // Make a panning cursor
         chart.cursor = new am4charts.XYCursor();
@@ -82,8 +76,10 @@ am4core.ready(function () {
         // chart.scrollbarX.series.push(series);
         // chart.scrollbarX.parent = chart.bottomAxesContainer;
 
-        // dateAxis.start = 0;
-        // dateAxis.keepSelection = true;
+
+
+        dateAxis.start = 0;
+        dateAxis.keepSelection = true;
 
         var segment = series.segments.template;
         segment.interactionsEnabled = true;
@@ -102,7 +98,6 @@ am4core.ready(function () {
             processOut(event.target.parent.parent.parent);
         });
 
-        var data;
         if (name === "Extreme weather events")
             data = [{ 'year': '2007-01', 'valueExtreme weather events': 4 }, { 'year': '2007-02', 'valueExtreme weather events': 2 }, { 'year': '2007-03', 'valueExtreme weather events': 4 }, { 'year': '2007-04', 'valueExtreme weather events': 6 }, { 'year': '2007-06', 'valueExtreme weather events': 4 }, { 'year': '2007-07', 'valueExtreme weather events': 5 }, { 'year': '2007-08', 'valueExtreme weather events': 2 }, { 'year': '2007-09', 'valueExtreme weather events': 1 }, { 'year': '2007-10', 'valueExtreme weather events': 3 }, { 'year': '2007-11', 'valueExtreme weather events': 4 }, { 'year': '2007-12', 'valueExtreme weather events': 2 }, { 'year': '2008-01', 'valueExtreme weather events': 2 }, { 'year': '2008-02', 'valueExtreme weather events': 1 }, { 'year': '2008-03', 'valueExtreme weather events': 5 }, { 'year': '2008-04', 'valueExtreme weather events': 3 }, { 'year': '2008-05', 'valueExtreme weather events': 1 }, { 'year': '2008-06', 'valueExtreme weather events': 5 }, { 'year': '2008-07', 'valueExtreme weather events': 3 }, { 'year': '2008-08', 'valueExtreme weather events': 2 }, { 'year': '2008-09', 'valueExtreme weather events': 4 }, { 'year': '2008-10', 'valueExtreme weather events': 1 }, { 'year': '2008-11', 'valueExtreme weather events': 5 }, { 'year': '2008-12', 'valueExtreme weather events': 2 }, { 'year': '2009-01', 'valueExtreme weather events': 2 }, { 'year': '2009-02', 'valueExtreme weather events': 4 }, { 'year': '2009-03', 'valueExtreme weather events': 2 }, { 'year': '2009-05', 'valueExtreme weather events': 2 }, { 'year': '2009-06', 'valueExtreme weather events': 1 }, { 'year': '2009-07', 'valueExtreme weather events': 4 }, { 'year': '2009-08', 'valueExtreme weather events': 4 }, { 'year': '2009-09', 'valueExtreme weather events': 3 }, { 'year': '2009-10', 'valueExtreme weather events': 3 }, { 'year': '2009-11', 'valueExtreme weather events': 1 }, { 'year': '2009-12', 'valueExtreme weather events': 10 }, { 'year': '2010-01', 'valueExtreme weather events': 2 }, { 'year': '2010-02', 'valueExtreme weather events': 3 }, { 'year': '2010-03', 'valueExtreme weather events': 1 }, { 'year': '2010-04', 'valueExtreme weather events': 2 }, { 'year': '2010-05', 'valueExtreme weather events': 2 }, { 'year': '2010-06', 'valueExtreme weather events': 1 }, { 'year': '2010-07', 'valueExtreme weather events': 1 }, { 'year': '2010-08', 'valueExtreme weather events': 2 }, { 'year': '2010-09', 'valueExtreme weather events': 1 }, { 'year': '2010-10', 'valueExtreme weather events': 1 }, { 'year': '2010-11', 'valueExtreme weather events': 2 }, { 'year': '2010-12', 'valueExtreme weather events': 1 }, { 'year': '2011-01', 'valueExtreme weather events': 2 }, { 'year': '2011-02', 'valueExtreme weather events': 4 }, { 'year': '2011-03', 'valueExtreme weather events': 1 }, { 'year': '2011-04', 'valueExtreme weather events': 2 }, { 'year': '2011-05', 'valueExtreme weather events': 1 }, { 'year': '2011-08', 'valueExtreme weather events': 1 }, { 'year': '2011-10', 'valueExtreme weather events': 1 }, { 'year': '2011-11', 'valueExtreme weather events': 4 }, { 'year': '2011-12', 'valueExtreme weather events': 3 }, { 'year': '2012-02', 'valueExtreme weather events': 1 }, { 'year': '2012-03', 'valueExtreme weather events': 2 }, { 'year': '2012-06', 'valueExtreme weather events': 2 }, { 'year': '2012-07', 'valueExtreme weather events': 2 }, { 'year': '2012-08', 'valueExtreme weather events': 1 }, { 'year': '2012-09', 'valueExtreme weather events': 1 }, { 'year': '2012-10', 'valueExtreme weather events': 2 }, { 'year': '2012-11', 'valueExtreme weather events': 3 }, { 'year': '2012-12', 'valueExtreme weather events': 1 }, { 'year': '2013-01', 'valueExtreme weather events': 7 }, { 'year': '2013-02', 'valueExtreme weather events': 5 }, { 'year': '2013-03', 'valueExtreme weather events': 5 }, { 'year': '2013-04', 'valueExtreme weather events': 11 }, { 'year': '2013-05', 'valueExtreme weather events': 1 }, { 'year': '2013-06', 'valueExtreme weather events': 2 }, { 'year': '2013-07', 'valueExtreme weather events': 1 }, { 'year': '2013-09', 'valueExtreme weather events': 1 }, { 'year': '2013-10', 'valueExtreme weather events': 3 }, { 'year': '2013-11', 'valueExtreme weather events': 4 }, { 'year': '2013-12', 'valueExtreme weather events': 3 }, { 'year': '2014-01', 'valueExtreme weather events': 3 }, { 'year': '2014-02', 'valueExtreme weather events': 1 }, { 'year': '2014-03', 'valueExtreme weather events': 5 }, { 'year': '2014-04', 'valueExtreme weather events': 2 }, { 'year': '2014-05', 'valueExtreme weather events': 1 }, { 'year': '2014-06', 'valueExtreme weather events': 1 }, { 'year': '2014-08', 'valueExtreme weather events': 2 }, { 'year': '2014-09', 'valueExtreme weather events': 6 }, { 'year': '2014-10', 'valueExtreme weather events': 2 }, { 'year': '2014-11', 'valueExtreme weather events': 2 }, { 'year': '2015-01', 'valueExtreme weather events': 2 }, { 'year': '2015-02', 'valueExtreme weather events': 2 }, { 'year': '2015-05', 'valueExtreme weather events': 3 }, { 'year': '2015-06', 'valueExtreme weather events': 1 }, { 'year': '2015-07', 'valueExtreme weather events': 3 }, { 'year': '2015-08', 'valueExtreme weather events': 1 }, { 'year': '2015-11', 'valueExtreme weather events': 4 }, { 'year': '2015-12', 'valueExtreme weather events': 1 }, { 'year': '2016-02', 'valueExtreme weather events': 1 }, { 'year': '2016-03', 'valueExtreme weather events': 1 }, { 'year': '2016-04', 'valueExtreme weather events': 1 }, { 'year': '2016-06', 'valueExtreme weather events': 1 }, { 'year': '2016-09', 'valueExtreme weather events': 1 }, { 'year': '2016-10', 'valueExtreme weather events': 2 }, { 'year': '2017-01', 'valueExtreme weather events': 1 }, { 'year': '2017-02', 'valueExtreme weather events': 3 }, { 'year': '2017-03', 'valueExtreme weather events': 1 }, { 'year': '2017-06', 'valueExtreme weather events': 4 }, { 'year': '2017-07', 'valueExtreme weather events': 1 }, { 'year': '2017-11', 'valueExtreme weather events': 1 }, { 'year': '2017-12', 'valueExtreme weather events': 10 }, { 'year': '2018-02', 'valueExtreme weather events': 1 }, { 'year': '2018-04', 'valueExtreme weather events': 16 }, { 'year': '2018-05', 'valueExtreme weather events': 2 }, { 'year': '2018-06', 'valueExtreme weather events': 2 }, { 'year': '2018-08', 'valueExtreme weather events': 6 }, { 'year': '2018-09', 'valueExtreme weather events': 1 }, { 'year': '2018-10', 'valueExtreme weather events': 3 }, { 'year': '2018-11', 'valueExtreme weather events': 1 }, { 'year': '2019-01', 'valueExtreme weather events': 10 }, { 'year': '2019-02', 'valueExtreme weather events': 7 }, { 'year': '2019-03', 'valueExtreme weather events': 2 }, { 'year': '2019-04', 'valueExtreme weather events': 4 }, { 'year': '2019-05', 'valueExtreme weather events': 4 }, { 'year': '2019-07', 'valueExtreme weather events': 2 }, { 'year': '2019-08', 'valueExtreme weather events': 4 }, { 'year': '2019-09', 'valueExtreme weather events': 5 }, { 'year': '2019-10', 'valueExtreme weather events': 6 }, { 'year': '2019-11', 'valueExtreme weather events': 5 }, { 'year': '2019-12', 'valueExtreme weather events': 6 }, { 'year': '2020-01', 'valueExtreme weather events': 6 }, { 'year': '2020-02', 'valueExtreme weather events': 3 }, { 'year': '2020-03', 'valueExtreme weather events': 3 }, { 'year': '2020-04', 'valueExtreme weather events': 4 }, { 'year': '2020-05', 'valueExtreme weather events': 2 }, { 'year': '2020-06', 'valueExtreme weather events': 2 }, { 'year': '2020-08', 'valueExtreme weather events': 2 }, { 'year': '2020-10', 'valueExtreme weather events': 2 }, { 'year': '2020-11', 'valueExtreme weather events': 6 }, { 'year': '2020-12', 'valueExtreme weather events': 3 }, { 'year': '2021-02', 'valueExtreme weather events': 1 }, { 'year': '2021-03', 'valueExtreme weather events': 3 }, { 'year': '2021-05', 'valueExtreme weather events': 1 }, { 'year': '2021-07', 'valueExtreme weather events': 3 }, { 'year': '2021-08', 'valueExtreme weather events': 2 }, { 'year': '2021-09', 'valueExtreme weather events': 1 }, { 'year': '2021-10', 'valueExtreme weather events': 12 }, { 'year': '2021-11', 'valueExtreme weather events': 1 }, { 'year': '2022-02', 'valueExtreme weather events': 2 }, { 'year': '2022-03', 'valueExtreme weather events': 3 }, { 'year': '2022-04', 'valueExtreme weather events': 3 }, { 'year': '2022-05', 'valueExtreme weather events': 2 }, { 'year': '2022-06', 'valueExtreme weather events': 6 }, { 'year': '2022-07', 'valueExtreme weather events': 3 }, { 'year': '2022-08', 'valueExtreme weather events': 1 }, { 'year': '2022-09', 'valueExtreme weather events': 3 }, { 'year': '2022-10', 'valueExtreme weather events': 2 }, { 'year': '2022-12', 'valueExtreme weather events': 2 }];
 
@@ -162,51 +157,25 @@ am4core.ready(function () {
 
         if (name === "Climate Science")
             data = [{ 'year': '2007-02', 'valueClimate Science': 6 }, { 'year': '2007-03', 'valueClimate Science': 2 }, { 'year': '2007-04', 'valueClimate Science': 1 }, { 'year': '2007-06', 'valueClimate Science': 1 }, { 'year': '2007-07', 'valueClimate Science': 1 }, { 'year': '2007-08', 'valueClimate Science': 1 }, { 'year': '2007-10', 'valueClimate Science': 3 }, { 'year': '2007-11', 'valueClimate Science': 1 }, { 'year': '2008-01', 'valueClimate Science': 1 }, { 'year': '2008-02', 'valueClimate Science': 1 }, { 'year': '2008-06', 'valueClimate Science': 2 }, { 'year': '2008-07', 'valueClimate Science': 1 }, { 'year': '2008-09', 'valueClimate Science': 1 }, { 'year': '2008-11', 'valueClimate Science': 1 }, { 'year': '2008-12', 'valueClimate Science': 4 }, { 'year': '2009-04', 'valueClimate Science': 1 }, { 'year': '2009-05', 'valueClimate Science': 2 }, { 'year': '2009-06', 'valueClimate Science': 2 }, { 'year': '2009-07', 'valueClimate Science': 3 }, { 'year': '2009-08', 'valueClimate Science': 2 }, { 'year': '2009-10', 'valueClimate Science': 2 }, { 'year': '2009-11', 'valueClimate Science': 9 }, { 'year': '2009-12', 'valueClimate Science': 5 }, { 'year': '2010-01', 'valueClimate Science': 10 }, { 'year': '2010-02', 'valueClimate Science': 8 }, { 'year': '2010-03', 'valueClimate Science': 7 }, { 'year': '2010-04', 'valueClimate Science': 3 }, { 'year': '2010-06', 'valueClimate Science': 5 }, { 'year': '2010-07', 'valueClimate Science': 6 }, { 'year': '2010-09', 'valueClimate Science': 6 }, { 'year': '2010-11', 'valueClimate Science': 3 }, { 'year': '2011-03', 'valueClimate Science': 1 }, { 'year': '2011-04', 'valueClimate Science': 2 }, { 'year': '2011-05', 'valueClimate Science': 1 }, { 'year': '2011-06', 'valueClimate Science': 1 }, { 'year': '2011-07', 'valueClimate Science': 1 }, { 'year': '2011-08', 'valueClimate Science': 2 }, { 'year': '2011-09', 'valueClimate Science': 1 }, { 'year': '2011-10', 'valueClimate Science': 1 }, { 'year': '2011-11', 'valueClimate Science': 1 }, { 'year': '2011-12', 'valueClimate Science': 2 }, { 'year': '2012-02', 'valueClimate Science': 2 }, { 'year': '2012-03', 'valueClimate Science': 2 }, { 'year': '2012-04', 'valueClimate Science': 1 }, { 'year': '2012-05', 'valueClimate Science': 2 }, { 'year': '2012-06', 'valueClimate Science': 1 }, { 'year': '2012-07', 'valueClimate Science': 1 }, { 'year': '2012-10', 'valueClimate Science': 1 }, { 'year': '2012-11', 'valueClimate Science': 3 }, { 'year': '2012-12', 'valueClimate Science': 1 }, { 'year': '2013-01', 'valueClimate Science': 2 }, { 'year': '2013-04', 'valueClimate Science': 2 }, { 'year': '2013-06', 'valueClimate Science': 2 }, { 'year': '2013-07', 'valueClimate Science': 1 }, { 'year': '2013-08', 'valueClimate Science': 1 }, { 'year': '2013-09', 'valueClimate Science': 2 }, { 'year': '2013-10', 'valueClimate Science': 1 }, { 'year': '2013-12', 'valueClimate Science': 1 }, { 'year': '2014-04', 'valueClimate Science': 1 }, { 'year': '2014-05', 'valueClimate Science': 4 }, { 'year': '2014-06', 'valueClimate Science': 1 }, { 'year': '2014-07', 'valueClimate Science': 1 }, { 'year': '2014-08', 'valueClimate Science': 2 }, { 'year': '2014-09', 'valueClimate Science': 4 }, { 'year': '2014-10', 'valueClimate Science': 1 }, { 'year': '2014-11', 'valueClimate Science': 2 }, { 'year': '2014-12', 'valueClimate Science': 1 }, { 'year': '2015-01', 'valueClimate Science': 5 }, { 'year': '2015-02', 'valueClimate Science': 4 }, { 'year': '2015-03', 'valueClimate Science': 1 }, { 'year': '2015-06', 'valueClimate Science': 1 }, { 'year': '2015-07', 'valueClimate Science': 2 }, { 'year': '2015-08', 'valueClimate Science': 1 }, { 'year': '2015-10', 'valueClimate Science': 1 }, { 'year': '2015-11', 'valueClimate Science': 2 }, { 'year': '2016-01', 'valueClimate Science': 4 }, { 'year': '2016-04', 'valueClimate Science': 1 }, { 'year': '2016-05', 'valueClimate Science': 1 }, { 'year': '2016-07', 'valueClimate Science': 2 }, { 'year': '2016-11', 'valueClimate Science': 1 }, { 'year': '2017-01', 'valueClimate Science': 1 }, { 'year': '2017-06', 'valueClimate Science': 1 }, { 'year': '2017-08', 'valueClimate Science': 1 }, { 'year': '2018-01', 'valueClimate Science': 1 }, { 'year': '2018-03', 'valueClimate Science': 1 }, { 'year': '2018-04', 'valueClimate Science': 1 }, { 'year': '2018-05', 'valueClimate Science': 3 }, { 'year': '2018-08', 'valueClimate Science': 2 }, { 'year': '2018-09', 'valueClimate Science': 4 }, { 'year': '2018-10', 'valueClimate Science': 2 }, { 'year': '2018-11', 'valueClimate Science': 2 }, { 'year': '2018-12', 'valueClimate Science': 3 }, { 'year': '2019-01', 'valueClimate Science': 2 }, { 'year': '2019-02', 'valueClimate Science': 3 }, { 'year': '2019-04', 'valueClimate Science': 1 }, { 'year': '2019-06', 'valueClimate Science': 2 }, { 'year': '2019-07', 'valueClimate Science': 1 }, { 'year': '2019-09', 'valueClimate Science': 1 }, { 'year': '2019-10', 'valueClimate Science': 2 }, { 'year': '2020-01', 'valueClimate Science': 1 }, { 'year': '2020-02', 'valueClimate Science': 1 }, { 'year': '2020-09', 'valueClimate Science': 1 }, { 'year': '2021-05', 'valueClimate Science': 1 }, { 'year': '2021-08', 'valueClimate Science': 2 }, { 'year': '2021-10', 'valueClimate Science': 1 }, { 'year': '2022-01', 'valueClimate Science': 1 }, { 'year': '2022-03', 'valueClimate Science': 5 }, { 'year': '2022-04', 'valueClimate Science': 5 }, { 'year': '2022-05', 'valueClimate Science': 1 }, { 'year': '2022-06', 'valueClimate Science': 3 }, { 'year': '2022-07', 'valueClimate Science': 1 }, { 'year': '2022-08', 'valueClimate Science': 1 }, { 'year': '2022-11', 'valueClimate Science': 2 }];
-        
-            series.data = data;
+
+
+
+
+
+
+        series.data = data;
 
         series.minBulletDistance = 2;
         var image = chart.plotContainer.createChild(am4core.Image);
         image.href = "asset/bush-fire.png";
-        image.width = 100;
+        image.width = 500;
         image.height = 500;
-        image.x = 1250;
-        image.y = 30;
-
-        // series.minBulletDistance = 2;
-        // var image = chart.plotContainer.createChild(am4core.Image);
-        // image.href = "elections 2016.png";
-        // image.width = 500;
-        // image.height = 500;
-        // image.x = 673;
-        // image.y = 130;
-
-        // series.minBulletDistance = 2;
-        // var image = chart.plotContainer.createChild(am4core.Image);
-        // image.href = "2016.png";
-        // image.width = 100;
-        // image.height = 100;
-        // image.x = 870;
-        // image.y = 50;
-
-        // series.minBulletDistance = 2;
-        // var image = chart.plotContainer.createChild(am4core.Image);
-        // image.href = "elections 2019.png";
-        // image.width = 500;
-        // image.height = 500;
-        // image.x = 962;
-        // image.y = 130;
-
-        // series.minBulletDistance = 2;
-        // var image = chart.plotContainer.createChild(am4core.Image);
-        // image.href = "2019.png";
-        // image.width = 90;
-        // image.height = 90;
-        // image.x = 1160;
-        // image.y = 50;
+        image.x = chart.plotContainer.pixelWidth / 2 - image.width / 2;
+        image.y = chart.plotContainer.pixelHeight / 2 - image.height / 2;
 
         return series;
     }
+
 
     chart.legend = new am4charts.Legend();
     chart.legend.position = "right";
