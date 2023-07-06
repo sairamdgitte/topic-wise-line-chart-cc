@@ -181,6 +181,14 @@ am4core.ready(function () {
         image.height = 425;
         image.x = 675;
         image.y = 10;
+
+        series.minBulletDistance = 2;
+        var image = chart.plotContainer.createChild(am4core.Image);
+        image.href = "asset/fed-election-2016.png";
+        image.width = 900;
+        image.height = 425;
+        image.x = 450;
+        image.y = 10;
         
         // image.Scrollbar.parent = chart.leftAxesContainer;
 
