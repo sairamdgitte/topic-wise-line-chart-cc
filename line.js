@@ -187,7 +187,7 @@ am4core.ready(function () {
         image.href = "asset/fed-election-2016.png";
         image.width = 900;
         image.height = 425;
-        image.x = 450;
+        image.x = 460;
         image.y = 10;
         
         // image.Scrollbar.parent = chart.leftAxesContainer;
